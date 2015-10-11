@@ -9,12 +9,19 @@
     android:orientation="vertical"
     tools:context="taghere.project.helloworld.taghere.ScanActivity">
 
-    <Button
-        android:layout_width="@dimen/scan_button_width"
-        android:layout_height="@dimen/scan_button_height"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/scac_button_text"
-        android:id="@+id/scan_button"
-        android:onClick="onButtonClick" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text=""
+        android:id="@+id/qr_code_data"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_gravity="center_horizontal|center_vertical"/>
+
+    <taghere.project.helloworld.taghere.CameraSources.CameraSurface
+        android:layout_width="@dimen/camera_view_width"
+        android:layout_height="@dimen/camera_view_height"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:id="@+id/camera_surdface"
+        android:onClick="onCameraPreviewClick" />
 
 </LinearLayout>
