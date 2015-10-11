@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Tag Here!</string>
+    <string name="scac_button_text">Scan QR Code</string>
+</resources>
