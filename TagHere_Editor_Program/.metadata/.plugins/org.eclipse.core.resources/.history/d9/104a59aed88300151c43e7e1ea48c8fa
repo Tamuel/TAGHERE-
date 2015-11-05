@@ -1,0 +1,25 @@
+import javax.swing.JFrame;
+
+/**
+ * JFrame for Login
+ * Have two textView
+ * @author DongKyu
+ */
+
+public class LoginFrame extends JFrame{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public LoginFrame() {
+		super();
+	}
+	
+	public static void main (String args[]) {
+		LoginFrame frame = new LoginFrame();
+		frame.show();
+	}
+
+}
