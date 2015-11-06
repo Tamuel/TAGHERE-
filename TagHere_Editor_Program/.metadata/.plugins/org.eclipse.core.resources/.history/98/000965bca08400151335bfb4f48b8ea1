@@ -1,0 +1,7 @@
+package GUI.Component;
+
+import javax.swing.JPanel;
+
+public class TitleBarPanel extends JPanel {
+
+}

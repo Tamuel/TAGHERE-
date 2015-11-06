@@ -1,0 +1,18 @@
+package GUI.Frame.SelectFloorPlan;
+
+import java.awt.Dimension;
+
+import javax.swing.JPanel;
+
+public class FloorPlanPreviewPanel extends JPanel {
+	private ArrayList<SimpleButton>
+	
+	public FloorPlanPreviewPanel(int width, int height) {
+		super();
+		
+		this.setLayout(null);
+		this.setBorder(null);
+		this.setSize(new Dimension(width, height));
+	}
+
+}

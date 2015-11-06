@@ -1,0 +1,11 @@
+package FloorPlanObject;
+
+/**
+ * Oval Object
+ * @author DongKyu
+ *
+ */
+
+public class Oval {
+
+}

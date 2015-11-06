@@ -1,0 +1,10 @@
+package GUI.Frame;
+
+import GUI.Component.SimpleJFrame;
+
+public class SelectFloorPlanFrame extends SimpleJFrame{
+
+	public SelectFloorPlanFrame(String frameName, int width, int height) {
+		super(frameName, width, height);
+	}
+}

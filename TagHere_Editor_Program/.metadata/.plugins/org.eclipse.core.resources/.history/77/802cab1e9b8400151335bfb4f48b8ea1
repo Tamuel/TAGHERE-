@@ -1,0 +1,5 @@
+package GUIFrame;
+
+public class SelectFloorPlanFrame extends SimpleJFrame{
+
+}

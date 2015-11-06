@@ -1,0 +1,12 @@
+package FloorPlanObject;
+
+/**
+ * Tag Object
+ * Have position, key, data
+ * @author DongKyu
+ *
+ */
+
+public class Tag {
+
+}

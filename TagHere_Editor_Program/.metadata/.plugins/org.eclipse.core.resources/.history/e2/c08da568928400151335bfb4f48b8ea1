@@ -1,0 +1,49 @@
+package GUIFrame;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
+import Data.StringData;
+import GUIComponent.SimpleJFrame;
+import GUIComponent.SimpleTextArea;
+import GUIComponent.SimpleTextField;
+
+/**
+ * JFrame for Login
+ * Have two textView
+ * @author DongKyu
+ */
+
+public class LoginFrame extends SimpleJFrame{
+	private SimpleTextField idField;
+	private SimplePasswordField passwordField;
+	
+	private int xBorder = 10;
+	private int yBorder = 10;
+	
+
+	public LoginFrame(String frameName, int width, int height) {
+		super(frameName, width, height);
+		getContentPane().setBackground(new Color(100, 160, 250));
+
+		idField = new SimpleTextField(StringData.ID);
+		idField.setBackground(Color.WHITE);
+		idField.setSize(WIDTH - xBorder * 2, HEIGHT / 4);
+		idField.setLocation(xBorder, yBorder);
+
+		passwordField = new SimpleTextField(StringData.PASSWORD);
+		passwordField.setBackground(Color.WHITE);
+		passwordField.setSize(WIDTH - xBorder * 2, HEIGHT / 4);
+		passwordField.setLocation(xBorder, yBorder * 2 + HEIGHT / 4);
+		
+		this.add(idField);
+		this.add(passwordField);
+	}
+	
+	public static void main (String args[]) {
+		LoginFrame frame = new LoginFrame("·Î±×ÀÎ", 300, 200);
+		
+	}
+
+}

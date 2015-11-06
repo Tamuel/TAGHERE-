@@ -1,0 +1,16 @@
+package GUI.Frame.SelectFloorPlan;
+
+import GUI.Component.SimpleJFrame;
+
+/**
+ * Show floor plan list and preview
+ * @author DongKyu
+ *
+ */
+
+public class SelectFloorPlanFrame extends SimpleJFrame{
+
+	public SelectFloorPlanFrame(String frameName, int width, int height) {
+		super(frameName, width, height);
+	}
+}

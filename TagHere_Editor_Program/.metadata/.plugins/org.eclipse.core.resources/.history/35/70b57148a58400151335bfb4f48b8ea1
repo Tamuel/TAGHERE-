@@ -1,0 +1,15 @@
+package FloorPlanObject;
+
+import java.awt.Image;
+
+/**
+ * Icon Object
+ * Have image, position and text
+ * @author DongKyu
+ *
+ */
+
+public class Icon {
+	private Image iconImage;
+
+}
