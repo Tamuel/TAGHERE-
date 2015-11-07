@@ -1,0 +1,46 @@
+package GUI.Frame.SelectFloorPlan;
+
+import java.awt.Dimension;
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+
+import Data.DataProvider;
+import Data.StringData;
+import FloorPlan.Building;
+import GUI.Component.SimpleButton;
+
+/**
+ * JPanel for search floor plan
+ * @author DongKyu
+ *
+ */
+public class SearchPanel extends JPanel {
+	
+	/** Buttons for show list of floor plan */
+	private ArrayList<SimpleButton> floorPlanButtons;
+	
+	private int xBorder = 10;
+	private int yBorder = 10;
+	private int listItemHeight = 70;
+	
+	public SearchPanel(int width, int height) {
+		super();
+		this.setLayout(null);
+		
+		floorPlanButtons = new ArrayList<SimpleButton>();
+		
+		ArrayList<Building> buildings = DataProvider.getInstance().getBuildings();
+		
+		for(int i = 0; i < buildings.size(); i++) {
+			floorPlanButtons.add(
+					new SimpleButton(buildings.get(i).getName(),
+							buildings.get(i).getFloors().size() + " " + StringData.NUMBER_OF_FLOORS,
+							width - xBorder * 2, listItemHeight));
+		}
+		
+		
+		this.setBorder(null);
+		this.setSize(new Dimension(width, height));
+	}
+}

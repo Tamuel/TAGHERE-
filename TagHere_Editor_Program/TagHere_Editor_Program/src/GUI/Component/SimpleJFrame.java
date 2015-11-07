@@ -64,4 +64,7 @@ public class SimpleJFrame extends JFrame implements MouseListener, MouseMotionLi
 		this.setBounds(x, y, WIDTH, HEIGHT);
 	}
 	
+	public String toString() {
+		return this.getTitle();
+	}
 }

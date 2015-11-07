@@ -10,7 +10,7 @@ import java.awt.Image;
  *
  */
 
-public class Icon {
+public class Icon extends FPObject {
 	
 	/** Image for icon image */
 	private Image iconImage;
@@ -18,5 +18,24 @@ public class Icon {
 	private Dimension position;
 	/** String for extra data */
 	private String text;
-
+	
+	
+	public Image getIconImage() {
+		return iconImage;
+	}
+	public void setIconImage(Image iconImage) {
+		this.iconImage = iconImage;
+	}
+	public Dimension getPosition() {
+		return position;
+	}
+	public void setPosition(Dimension position) {
+		this.position = position;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
+	}
 }

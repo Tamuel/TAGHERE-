@@ -10,7 +10,7 @@ import java.awt.Dimension;
  *
  */
 
-public class Tag {
+public class Tag extends FPObject {
 	
 	/** Dimension for position */
 	private Dimension position;
@@ -19,4 +19,23 @@ public class Tag {
 	/** String for extra data */
 	private String data;
 	
+	
+	public Dimension getPosition() {
+		return position;
+	}
+	public void setPosition(Dimension position) {
+		this.position = position;
+	}
+	public long getKey() {
+		return key;
+	}
+	public void setKey(long key) {
+		this.key = key;
+	}
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
+	}
 }

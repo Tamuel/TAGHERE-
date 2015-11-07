@@ -1,0 +1,44 @@
+package GUI.Frame.SelectFloorPlan;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+
+import Data.ColorData;
+import FloorPlan.Building;
+import GUI.Component.SimpleLabel;
+
+/**
+ * JPanel for preview floor plan
+ * @author DongKyu
+ *
+ */
+
+public class PreviewPanel extends JPanel {
+	
+	/** For get building data */
+	private Building building;
+	/** For show building name */
+	private SimpleLabel nameLabel;
+//	/** For show building position */
+//	private SimpleLabel positionLabel;
+	/** For show building information */
+	private SimpleLabel infoLabel;
+	
+	public PreviewPanel(int width, int height, Building building) {
+		super();
+		this.building = building;
+		
+		nameLabel = new SimpleLabel(building.getName());
+		infoLabel = new SimpleLabel(building.getInformation());
+//		positionLabel = new SimpleLabel(building.getPosition());
+
+		this.setBackground(Color.WHITE);
+		this.setBorder(BorderFactory.createLineBorder(ColorData.GRAY, 1));
+		this.setPreferredSize(new Dimension(width, height));
+		this.setSize(new Dimension(width, height));
+	}
+
+}

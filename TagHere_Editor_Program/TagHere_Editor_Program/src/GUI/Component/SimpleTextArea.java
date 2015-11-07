@@ -11,8 +11,8 @@ import javax.swing.border.EmptyBorder;
 
 public class SimpleTextArea extends JTextArea{
 	
-	private Font font = new Font("¸¼Àº °íµñ", Font.PLAIN, 15);
-	private Font font2 = new Font("¸¼Àº °íµñ", Font.PLAIN, 12);
+	private Font font = new Font("¸¼Àº °íµñ", Font.PLAIN, 20);
+	private Font font2 = new Font("¸¼Àº °íµñ", Font.PLAIN, 15);
 
 	private Color fontColor = new Color(120, 120, 120);
 	private Color fontColor2 = new Color(150, 150, 150);

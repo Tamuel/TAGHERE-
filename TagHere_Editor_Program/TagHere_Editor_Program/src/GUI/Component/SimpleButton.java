@@ -2,6 +2,7 @@ package GUI.Component;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.Insets;
 
 import javax.swing.JButton;
@@ -10,14 +11,22 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
+import Data.ColorData;
+
+/**
+ * Button class that child of JButton
+ * toString function return it's text
+ * 
+ * @author DongKyu
+ * */
 public class SimpleButton extends JButton{
 	
 	JLabel label1;
 	JLabel label2;
 	JLabel label3;
 	
-	private Font font = new Font("?ç†?èô?òô?ç†?èô?òô ?ç†?èô?òô?ç†Ôø?", Font.PLAIN, 15);
-	private Font font2 = new Font("?ç†?èô?òô?ç†?èô?òô ?ç†?èô?òô?ç†Ôø?", Font.PLAIN, 12);
+	private Font font = new Font("∏º¿∫ ∞ÌµÒ", Font.PLAIN, 20);
+	private Font font2 = new Font("∏º¿∫ ∞ÌµÒ", Font.PLAIN, 15);
 	
 	private int adjustPos = -20;
 
@@ -108,11 +117,29 @@ public class SimpleButton extends JButton{
 		this.setOpaque(true);
 		//this.setBackground(new Color(30, 114, 237));
 		this.setMargin(new Insets(0, 0, 0, 0));
-		this.setBackground(new Color(83, 157, 197));
+		this.setBackground(ColorData.BUTTON_COLOR);
 		Border empty = new EmptyBorder(2, 2, 2, 2);
 		this.setBorder(empty);
 		this.setFont(font);
 		this.setForeground(Color.WHITE);
 		this.setFocusPainted(false);
+        super.setContentAreaFilled(false);
+	}
+	
+	@Override
+    protected void paintComponent(Graphics g) {
+        if (getModel().isPressed()) {
+        	g.setColor(getBackground().darker());
+        } else if (getModel().isRollover()) {
+            g.setColor(getBackground());
+        } else {
+            g.setColor(getBackground());
+        }
+        g.fillRect(0, 0, getWidth(), getHeight());
+        super.paintComponent(g);
+    }
+	
+	public String toString() {
+		return getText();
 	}
 }

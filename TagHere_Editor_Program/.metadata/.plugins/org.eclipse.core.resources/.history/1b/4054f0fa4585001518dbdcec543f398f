@@ -1,0 +1,31 @@
+package GUI.Component;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+
+import Data.ColorData;
+import Data.DimenData;
+
+/**
+ * JPanel for title bar
+ * @author DongKyu
+ *
+ */
+
+public class TitleBarPanel extends JPanel {
+	
+	/** String for title bar text */
+	String titleText;
+	
+	public TitleBarPanel(String text, int width) {
+		titleText = text;
+		
+		this.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, ColorData.GRAY));
+		this.setPreferredSize(new Dimension(width, DimenData.TITLE_BAR_HEIGHT));
+		this.setSize(width, DimenData.TITLE_BAR_HEIGHT);
+	}
+
+}

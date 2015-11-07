@@ -1,0 +1,23 @@
+package Data;
+
+/**
+ * Handle Data from server
+ * @author DongKyu
+ *
+ */
+public class DBProvider {
+	private static DataProvider singleton = null;
+
+	
+	private DBProvider() {
+	}
+
+	public static DataProvider getInstance()
+	{ 
+		if(singleton == null)
+		{
+			singleton  = new DataProvider();
+		}
+		return singleton;
+	}
+}

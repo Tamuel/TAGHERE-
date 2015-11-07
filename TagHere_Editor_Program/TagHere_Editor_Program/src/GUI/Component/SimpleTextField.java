@@ -10,8 +10,12 @@ import java.awt.event.MouseListener;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
-public class SimpleTextField extends JTextField implements MouseListener, FocusListener {
+import Data.ColorData;
+
+public class SimpleTextField extends JTextField implements MouseListener, FocusListener, DocumentListener {
 	private Font font = new Font("¸¼Àº °íµñ", Font.PLAIN, 15);
 	private Font font2 = new Font("¸¼Àº °íµñ", Font.PLAIN, 12);
 	
@@ -39,6 +43,7 @@ public class SimpleTextField extends JTextField implements MouseListener, FocusL
 		this.setForeground(fontColor);
 		this.addFocusListener(this);
 		this.addMouseListener(this);
+		this.getDocument().addDocumentListener(this);
 		this.setFocusable(false);
 	}
 	
@@ -60,6 +65,26 @@ public class SimpleTextField extends JTextField implements MouseListener, FocusL
 		}
 	}
 
+	@Override
+	public void changedUpdate(DocumentEvent arg0) {
+		if(getText().equals(text) || getText().equals(""))
+			setBackground(ColorData.LIGHT_GRAY);
+		else
+			setBackground(ColorData.WHITE);
+	}
+
+	@Override
+	public void insertUpdate(DocumentEvent arg0) {
+		if(getText().equals(text) || getText().equals(""))
+			setBackground(ColorData.LIGHT_GRAY);
+		else
+			setBackground(ColorData.WHITE);
+	}
+
+	@Override
+	public void removeUpdate(DocumentEvent arg0) {
+	}
+	
 	public void mouseClicked(MouseEvent arg0) {
 	}
 
@@ -75,4 +100,5 @@ public class SimpleTextField extends JTextField implements MouseListener, FocusL
 
 	public void mouseReleased(MouseEvent arg0) {
 	}
+
 }

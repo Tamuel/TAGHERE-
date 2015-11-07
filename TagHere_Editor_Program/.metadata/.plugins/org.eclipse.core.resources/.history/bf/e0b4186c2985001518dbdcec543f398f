@@ -1,0 +1,15 @@
+package FloorPlan;
+
+import java.awt.Dimension;
+import java.util.ArrayList;
+
+public class Building {
+
+	/** String for building name */
+	private String name;
+	/** Dimension for building position in map */
+	private Dimension position;
+	private String information;
+	/** Building's floors */
+	private ArrayList<Floor> floors;
+}

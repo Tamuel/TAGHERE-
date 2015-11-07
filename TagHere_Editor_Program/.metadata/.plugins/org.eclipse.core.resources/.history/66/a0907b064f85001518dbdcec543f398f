@@ -1,0 +1,19 @@
+package GUI.Frame.SelectFloorPlan;
+
+import javax.swing.JPanel;
+
+/**
+ * JPanel for preview floor plan
+ * @author DongKyu
+ *
+ */
+
+public class PreviewPanel extends JPanel {
+	
+	private Building building;
+	
+	public PreviewPanel(int width, int height, Building building) {
+		super();
+	}
+
+}

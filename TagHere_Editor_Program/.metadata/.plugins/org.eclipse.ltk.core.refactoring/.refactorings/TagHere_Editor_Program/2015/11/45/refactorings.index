@@ -19,3 +19,7 @@
 1446827654795	Rename package 'Figure'
 1446828424986	Rename type 'LineTypes'
 1446828437371	Rename type 'PTypes'
+1446884174736	Rename type 'DBProvider'
+1446886574975	Rename type 'Object'
+1446910317656	Rename field 'editBuilding'
+1446910323680	Rename field 'deleteBuilding'

@@ -1,0 +1,24 @@
+package GUI.Frame.EditFloorPlan;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import GUI.Component.SimpleJFrame;
+
+/**
+ * JFrame for edit floor plan
+ * @author DongKyu
+ * @since 11.07.15
+ */
+public class EditFloorPlanFrame extends SimpleJFrame {
+
+	public EditFloorPlanFrame(String frameName, int width, int height) {
+		super(frameName, width, height);
+
+		this.setBackground(Color.WHITE);
+		this.setBorder(null);
+		this.setPreferredSize(new Dimension(width, height));
+		this.setSize(new Dimension(width, height));
+	}
+
+}
