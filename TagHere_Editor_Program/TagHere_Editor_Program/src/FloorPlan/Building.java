@@ -1,14 +1,14 @@
 package FloorPlan;
 
-import java.awt.Dimension;
+import java.awt.Point;
 import java.util.ArrayList;
 
 public class Building {
 
 	/** String for building name */
 	private String name;
-	/** Dimension for building position in map */
-	private Dimension position;
+	/** Point for building position in map */
+	private Point position;
 	/** String for building information */
 	private String information;
 	/** Building's floors */
@@ -20,7 +20,7 @@ public class Building {
 		floors = new ArrayList<Floor>();
 	}
 	
-	public Building(String name, Dimension position, String info) {
+	public Building(String name, Point position, String info) {
 		setName(name);
 		setPosition(position);
 		setInformation(info);
@@ -35,10 +35,10 @@ public class Building {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Dimension getPosition() {
+	public Point getPosition() {
 		return position;
 	}
-	public void setPosition(Dimension position) {
+	public void setPosition(Point position) {
 		this.position = position;
 	}
 	public String getInformation() {

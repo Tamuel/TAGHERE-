@@ -19,6 +19,13 @@ public class SimpleLabel extends JLabel {
 		this.setHorizontalAlignment(SwingConstants.CENTER);
 		setBigFont();
 	}
+	
+	public SimpleLabel(String text, int width, int height) {
+		super(text);
+		this.setHorizontalAlignment(SwingConstants.CENTER);
+		this.setSize(width, height);
+		setBigFont();
+	}
 
 	public void setBigFont() {
 		this.setFont(font);

@@ -1,7 +1,0 @@
-package GUI.Frame.SelectFloorPlan;
-
-import javax.swing.JPanel;
-
-public class FloorPlanPreviewPanel extends JPanel {
-
-}

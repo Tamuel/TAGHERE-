@@ -11,7 +11,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
-import Data.ColorData;
+import Resource.ColorR;
 
 /**
  * Button class that child of JButton
@@ -117,7 +117,7 @@ public class SimpleButton extends JButton{
 		this.setOpaque(true);
 		//this.setBackground(new Color(30, 114, 237));
 		this.setMargin(new Insets(0, 0, 0, 0));
-		this.setBackground(ColorData.BUTTON_COLOR);
+		this.setBackground(ColorR.BUTTON_COLOR);
 		Border empty = new EmptyBorder(2, 2, 2, 2);
 		this.setBorder(empty);
 		this.setFont(font);

@@ -7,10 +7,10 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import Data.ColorData;
-import Data.DataProvider;
-import Data.DimenData;
-import Data.StringData;
+import Resource.ColorR;
+import Resource.DataProvider;
+import Resource.DimenR;
+import Resource.StringR;
 
 /**
  * JPanel for title bar
@@ -39,17 +39,15 @@ public class TitleBarPanel extends JPanel {
 		this.setLayout(null);
 		
 		title = new SimpleLabel(text);
-		title.setSize(width, DimenData.TITLE_BAR_HEIGHT);
+		title.setSize(width, DimenR.TITLE_BAR_HEIGHT);
 		title.setHorizontalAlignment(SwingConstants.LEFT);
-		title.setBigFont();
-		title.setForeground(ColorData.TITLE_COLOR);
+		title.setForeground(ColorR.TITLE_COLOR);
 		title.setLocation(xBorder, 0);
 		
 		id = new SimpleLabel(DataProvider.getInstance().getId());
-		id.setSize(width, DimenData.TITLE_BAR_HEIGHT);
+		id.setSize(width, DimenR.TITLE_BAR_HEIGHT);
 		id.setHorizontalAlignment(SwingConstants.LEFT);
-		id.setSmallFont();
-		id.setForeground(ColorData.TITLE_COLOR);
+		id.setForeground(ColorR.TITLE_COLOR);
 		id.setLocation(width * 5 / 6, 0);
 		
 		addDecoration();
@@ -57,10 +55,10 @@ public class TitleBarPanel extends JPanel {
 		this.add(title);
 		this.add(id);
 		
-		this.setBackground(ColorData.TITLE_BAR_COLOR);
-		this.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, ColorData.GRAY));
-		this.setPreferredSize(new Dimension(width, DimenData.TITLE_BAR_HEIGHT));
-		this.setSize(width, DimenData.TITLE_BAR_HEIGHT);
+		this.setBackground(ColorR.TITLE_BAR_COLOR);
+		this.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, ColorR.GRAY));
+		this.setPreferredSize(new Dimension(width, DimenR.TITLE_BAR_HEIGHT));
+		this.setSize(width, DimenR.TITLE_BAR_HEIGHT);
 	}
 	
 	/**
@@ -69,14 +67,14 @@ public class TitleBarPanel extends JPanel {
 	 * */
 	public void addDecoration() {
 		switch(context.toString()) {
-		case StringData.SELECT_BUILDING:
+		case StringR.SELECT_BUILDING:
 			break;
 			
-		case StringData.EDIT_FLOOR_PLAN:
-			saveButton = new SimpleButton(StringData.SAVE);
+		case StringR.EDIT_FLOOR_PLAN:
+			saveButton = new SimpleButton(StringR.SAVE);
 			saveButton.setSize(
-					DimenData.BUTTON_WIDTH,
-					DimenData.BUTTON_HEIGHT
+					DimenR.BUTTON_WIDTH,
+					DimenR.BUTTON_HEIGHT
 					);
 			saveButton.setLocation(
 					id.getLocation().x - saveButton.getWidth() - xBorder,

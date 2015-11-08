@@ -9,7 +9,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
-public class SimpleTextArea extends JTextArea{
+public class SimpleTextArea extends JTextArea {
 	
 	private Font font = new Font("¸¼Àº °íµñ", Font.PLAIN, 20);
 	private Font font2 = new Font("¸¼Àº °íµñ", Font.PLAIN, 15);

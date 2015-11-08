@@ -1,7 +1,7 @@
 package FloorPlanObject;
 
 import java.awt.Color;
-import java.awt.Dimension;
+import java.awt.Point;
 
 /**
  * Rectangle Object
@@ -12,46 +12,63 @@ import java.awt.Dimension;
 
 public class Rectangle extends FPObject {
 	
-	/** Dimension for start position */
-	private Dimension startPosition;
-	/** Dimension for end position */
-	private Dimension endPosition;
-	/** Integer for thisckness */
+	/** Point for start position */
+	private Point startPosition;
+	/** Point for end position */
+	private Point endPosition;
+	/** Integer for thickness */
 	private int thickness;
 	/** LineType for line type */
 	private LineType type;
 	/** Color for line color */
 	private Color color;
 	
+	public Rectangle(int startX, int startY) {
+		startPosition = new Point(startX, startY);
+	}
 	
-	public Dimension getStartPosition() {
+	public Point getStartPosition() {
 		return startPosition;
 	}
-	public void setStartPosition(Dimension startPosition) {
+	
+	public void setStartPosition(Point startPosition) {
 		this.startPosition = startPosition;
 	}
-	public Dimension getEndPosition() {
+	
+	public Point getEndPosition() {
 		return endPosition;
 	}
-	public void setEndPosition(Dimension endPosition) {
+	
+	public void setEndPosition(Point endPosition) {
 		this.endPosition = endPosition;
 	}
+	
 	public int getThickness() {
 		return thickness;
 	}
+	
 	public void setThickness(int thickness) {
 		this.thickness = thickness;
 	}
-	public LineType getType() {
+	
+	public LineType getLineType() {
 		return type;
 	}
+	
 	public void setType(LineType type) {
 		this.type = type;
 	}
+	
 	public Color getColor() {
 		return color;
 	}
+	
 	public void setColor(Color color) {
 		this.color = color;
+	}
+	
+	@Override
+	public ObjectType getType() {
+		return ObjectType.RECTANGLE;
 	}
 }

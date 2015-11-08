@@ -1,17 +1,14 @@
 package GUI.Frame.SelectFloorPlan;
 
-import java.awt.Color;
-import java.awt.Dimension;
+import java.awt.Point;
 
 import javax.swing.BorderFactory;
-import javax.swing.JScrollPane;
 
-import Data.ColorData;
-import Data.DataProvider;
 import FloorPlan.Building;
 import GUI.Component.SimpleJFrame;
 import GUI.Component.SimpleScrollPane;
 import GUI.Component.TitleBarPanel;
+import Resource.ColorR;
 
 /**
  * JFrame for show floor plan list and preview
@@ -40,33 +37,28 @@ public class SelectFloorPlanFrame extends SimpleJFrame{
 		super(frameName, width, height);
 		
 		titleBar = new TitleBarPanel(this, frameName, width);
-		searchPanel = new SearchPanel(width / 3, height, this);
+		searchPanel = new SearchPanel(this, width / 3, height);
 		searchScroll = new SimpleScrollPane(searchPanel);
 		
 		searchScroll.setLocation(0, titleBar.getHeight());
-		searchScroll.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, ColorData.GRAY));
+		searchScroll.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, ColorR.GRAY));
 		searchScroll.setSize(
 				searchPanel.getWidth() + scrollBarBorder,
 				this.HEIGHT - titleBar.getHeight()
 				);
-		searchScroll.setVerticalScrollBarPolicy(
-				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-		searchScroll.setHorizontalScrollBarPolicy(
-				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-		searchScroll.getVerticalScrollBar().setUnitIncrement(10);
 		
 		updatePreviewPanel();
 		
 		this.add(titleBar);
 		this.add(searchScroll);
-		this.getRootPane().setBorder(BorderFactory.createLineBorder(ColorData.GRAY, 2));
+		this.getRootPane().setBorder(BorderFactory.createLineBorder(ColorR.GRAY, 2));
 	}
 	
 	/** Refresh preview panel */
 	public void updatePreviewPanel() {
 		building = new Building(
 				"AAAA",
-				new Dimension(100, 100),
+				new Point(100, 100),
 				"This is building asd fasfdasfddasfa sdfasdfasfadsfasdfasdfasdfads f asdf asdf asfd asf"
 				+ "a sdfasd fasd fsdfasfd asdf asdf asf asf asdf asdf asdf asfasdf asdf asdf asdf asf as"
 				+ "d fasfasdfasfa sdfasfasdfadas"
@@ -78,6 +70,7 @@ public class SelectFloorPlanFrame extends SimpleJFrame{
 		}
 		
 		previewPanel = new PreviewPanel(
+				this,
 				WIDTH * 2 / 3 - xBorder * 2 - scrollBarBorder,
 				HEIGHT - titleBar.getHeight() - yBorder * 2,
 				building

@@ -14,11 +14,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-import Data.ColorData;
+import Resource.ColorR;
 
 public class SimplePasswordField extends JPasswordField implements MouseListener, FocusListener, DocumentListener {
-	private Font font = new Font("¸¼Àº °íµñ", Font.PLAIN, 15);
-	private Font font2 = new Font("¸¼Àº °íµñ", Font.PLAIN, 12);
+	private Font font = new Font("¸¼Àº °íµñ", Font.PLAIN, 20);
+	private Font font2 = new Font("¸¼Àº °íµñ", Font.PLAIN, 15);
 	
 	private Color fontColor = new Color(180, 180, 180);
 	private Color fontColor2 = new Color(120, 120, 120);
@@ -70,18 +70,18 @@ public class SimplePasswordField extends JPasswordField implements MouseListener
 	public void changedUpdate(DocumentEvent arg0) {
 		if(String.valueOf(getPassword()).equals(text) ||
 				String.valueOf(getPassword()).equals(""))
-			setBackground(ColorData.LIGHT_GRAY);
+			setBackground(ColorR.LIGHT_GRAY);
 		else
-			setBackground(ColorData.WHITE);
+			setBackground(ColorR.WHITE);
 	}
 
 	@Override
 	public void insertUpdate(DocumentEvent arg0) {
 		if(String.valueOf(getPassword()).equals(text) ||
 				String.valueOf(getPassword()).equals(""))
-			setBackground(ColorData.LIGHT_GRAY);
+			setBackground(ColorR.LIGHT_GRAY);
 		else
-			setBackground(ColorData.WHITE);
+			setBackground(ColorR.WHITE);
 	}
 
 	@Override

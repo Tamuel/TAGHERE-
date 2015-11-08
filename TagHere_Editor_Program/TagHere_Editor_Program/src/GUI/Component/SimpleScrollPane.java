@@ -33,7 +33,7 @@ public class SimpleScrollPane extends JScrollPane {
     private static final Color THUMB_COLOR = Color.BLACK;
 
     public SimpleScrollPane(Component view) {
-        this(view, VERTICAL_SCROLLBAR_AS_NEEDED, HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        this(view, VERTICAL_SCROLLBAR_AS_NEEDED, HORIZONTAL_SCROLLBAR_NEVER);
     }
 
     public SimpleScrollPane(int vsbPolicy, int hsbPolicy) {
@@ -41,7 +41,8 @@ public class SimpleScrollPane extends JScrollPane {
     }
 
     public SimpleScrollPane(Component view, int vsbPolicy, int hsbPolicy) {
-
+    	getHorizontalScrollBar().setUnitIncrement(10);
+    	getVerticalScrollBar().setUnitIncrement(10);
         setBorder(null);
 
         // Set ScrollBar UI
@@ -100,6 +101,9 @@ public class SimpleScrollPane extends JScrollPane {
         setComponentZOrder(getVerticalScrollBar(), 0);
         setComponentZOrder(getHorizontalScrollBar(), 1);
         setComponentZOrder(getViewport(), 2);
+        
+        this.setVerticalScrollBarPolicy(vsbPolicy);
+        this.setHorizontalScrollBarPolicy(hsbPolicy);
 
         viewport.setView(view);
     }

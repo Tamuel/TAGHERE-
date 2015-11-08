@@ -19,4 +19,8 @@
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="FloorPlanObject.Oval"/>
+<fullyQualifiedTypeName name="FloorPlanObject.ObjectType"/>
+<fullyQualifiedTypeName name="Data.DimenData"/>
+<fullyQualifiedTypeName name="FloorPlanObject.Rectangle"/>
 </qualifiedTypeNameHistroy>

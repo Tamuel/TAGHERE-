@@ -1,0 +1,59 @@
+package GUI.Frame.EditFloorPlan;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+
+import Data.ColorData;
+import Data.DimenData;
+import FloorPlanObject.ObjectType;
+import GUI.Component.SimpleButton;
+
+public class ToolsPanel extends JPanel {
+
+	/** Get object types */
+	private ObjectType objectType;
+	/** Buttons for object list */
+	private ArrayList<SimpleButton> buttons;
+	
+	private int xBorder = 10;
+	private int yBorder = 10;
+	
+	public ToolsPanel(int width, int height) {
+		super();
+		this.setLayout(null);
+		
+		buttons = new ArrayList<SimpleButton>();
+		
+		int buttonWidth = (width - xBorder * 3) / 2;
+		
+		for(int i = 0; i < objectType.values().length; i++) {
+			buttons.add(new SimpleButton(
+					objectType.values()[i].name(),
+					buttonWidth,
+					DimenData.BUTTON_HEIGHT
+					));
+			if(i % 2 == 0) {
+				buttons.get(i).setLocation(
+						xBorder,
+						yBorder + (i / 2) * DimenData.BUTTON_HEIGHT
+						);
+			} else {
+				buttons.get(i).setLocation(
+						xBorder * 2 + buttonWidth,
+						yBorder + (i - 1) / 2 * DimenData.BUTTON_HEIGHT
+						);
+			}
+			
+			this.add(buttons.get(i));
+		}
+		
+
+		this.setBackground(ColorData.WHITE);
+		this.setBorder(null);
+		this.setPreferredSize(new Dimension(width, height));
+		this.setSize(new Dimension(width, height));
+	}
+}

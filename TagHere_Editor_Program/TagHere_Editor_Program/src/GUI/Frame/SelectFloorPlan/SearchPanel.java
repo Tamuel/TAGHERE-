@@ -9,11 +9,12 @@ import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
-import Data.ColorData;
-import Data.DataProvider;
-import Data.StringData;
 import FloorPlan.Building;
 import GUI.Component.SimpleButton;
+import GUI.Component.SimpleSelectButton;
+import Resource.ColorR;
+import Resource.DataProvider;
+import Resource.StringR;
 
 /**
  * JPanel for search floor plan
@@ -26,7 +27,7 @@ public class SearchPanel extends JPanel implements ActionListener {
 	private SelectFloorPlanFrame context;
 	
 	/** Buttons for show list of floor plan */
-	private ArrayList<SimpleButton> floorPlanButtons;
+	private ArrayList<SimpleSelectButton> floorPlanButtons;
 	
 	/** Border between buttons */
 	private int xBorder = 5;
@@ -35,28 +36,29 @@ public class SearchPanel extends JPanel implements ActionListener {
 	/** Button height */
 	private int listItemHeight = 70;
 	
-	public SearchPanel(int width, int height, SelectFloorPlanFrame context) {
+	public SearchPanel(SelectFloorPlanFrame context, int width, int height) {
 		super();
 		this.setLayout(null);
 		this.context = context;
 		
-		floorPlanButtons = new ArrayList<SimpleButton>();
+		floorPlanButtons = new ArrayList<SimpleSelectButton>();
 		
 		ArrayList<String> buildings = DataProvider.getInstance().getBuildingsData();
 		
 		int i;
 		for(i = 0; i < buildings.size(); i++) {
 			floorPlanButtons.add(
-					new SimpleButton(buildings.get(i),
-							width - xBorder * 2, listItemHeight)
+					new SimpleSelectButton(
+							floorPlanButtons,
+							BorderFactory.createMatteBorder(1, 1, 1, 1, ColorR.GRAY),
+							buildings.get(i),
+							width - xBorder * 2,
+							listItemHeight)
 					);
 			floorPlanButtons.get(i).setLocation(xBorder,
 					yBorder * (i + 1) + listItemHeight * i);
-			floorPlanButtons.get(i).setBackground(Color.WHITE);
-			floorPlanButtons.get(i).setBorder(
-					BorderFactory.createMatteBorder(1, 1, 1, 1, ColorData.GRAY)
-					);
-			floorPlanButtons.get(i).setForeground(ColorData.DARK_GRAY);
+			floorPlanButtons.get(i).setBackground(ColorR.WHITE);
+			floorPlanButtons.get(i).setForeground(ColorR.DARK_GRAY);
 			floorPlanButtons.get(i).addActionListener(this);
 			
 			this.add(floorPlanButtons.get(i));
@@ -65,7 +67,7 @@ public class SearchPanel extends JPanel implements ActionListener {
 		if(height < yBorder * (i + 1) + listItemHeight * i)
 			height = yBorder * (i + 1) + listItemHeight * i;
 		
-		this.setBackground(Color.WHITE);
+		this.setBackground(ColorR.WHITE);
 		this.setBorder(null);
 		this.setPreferredSize(new Dimension(width, height));
 		this.setSize(new Dimension(width, height));
