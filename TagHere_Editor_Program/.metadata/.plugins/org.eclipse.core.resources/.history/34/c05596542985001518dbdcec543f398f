@@ -1,0 +1,11 @@
+package FloorPlan;
+
+import java.awt.Dimension;
+
+public class Building {
+
+	/** String for building name */
+	private String name;
+	/** Dimension for building position in map */
+	private Dimension position;
+}

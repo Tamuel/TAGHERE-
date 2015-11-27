@@ -1,0 +1,8 @@
+package FloorPlan;
+
+import java.awt.Dimension;
+
+public class FloorPlan {
+	private ArrayList<Object> objects;
+
+}

@@ -1,0 +1,13 @@
+package FloorPlanObject;
+
+import java.awt.Dimension;
+
+/**
+ * Super Class of floor plan objects
+ * @author DongKyu
+ *
+ */
+public abstract class FPObject {
+
+	abstract public Dimension getStartPosition();
+}

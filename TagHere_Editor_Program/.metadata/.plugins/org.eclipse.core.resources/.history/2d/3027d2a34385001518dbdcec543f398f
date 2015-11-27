@@ -1,0 +1,62 @@
+package GUI.Frame.SelectFloorPlan;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.util.ArrayList;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+
+import Data.DataProvider;
+import Data.StringData;
+import FloorPlan.Building;
+import GUI.Component.SimpleButton;
+
+/**
+ * JPanel for search floor plan
+ * @author DongKyu
+ *
+ */
+public class SearchPanel extends JPanel {
+	
+	/** Buttons for show list of floor plan */
+	private ArrayList<SimpleButton> floorPlanButtons;
+	
+	/** Border between buttons */
+	private int xBorder = 10;
+	/** Border between buttons */
+	private int yBorder = 10;
+	/** Buttons height */
+	private int listItemHeight = 70;
+	
+	public SearchPanel(int width, int height) {
+		super();
+		this.setLayout(null);
+		
+		floorPlanButtons = new ArrayList<SimpleButton>();
+		
+		ArrayList<Building> buildings = DataProvider.getInstance().getBuildings();
+		
+		int i;
+		for(i = 0; i < buildings.size(); i++) {
+			floorPlanButtons.add(
+					new SimpleButton(buildings.get(i).getName(),
+							buildings.get(i).getFloors().size() + " "
+							+ StringData.NUMBER_OF_FLOORS,
+							width - xBorder * 2, listItemHeight)
+					);
+			floorPlanButtons.get(i).setLocation(xBorder,
+					yBorder * (i + 1) + listItemHeight * i);
+			
+			this.add(floorPlanButtons.get(i));
+		}
+		
+		if(height < yBorder * (i + 1) + listItemHeight * i)
+			height = yBorder * (i + 1) + listItemHeight * i;
+		
+		this.setBackground(Color.WHITE);
+		this.setBorder(null);
+		this.setPreferredSize(new Dimension(width, height));
+		this.setSize(new Dimension(width, height));
+	}
+}

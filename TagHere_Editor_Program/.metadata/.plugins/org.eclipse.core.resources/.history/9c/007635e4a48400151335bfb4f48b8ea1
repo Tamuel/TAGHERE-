@@ -1,0 +1,11 @@
+package FloorPlanObject;
+
+/**
+ * Tag Object
+ * @author DongKyu
+ *
+ */
+
+public class Tag {
+
+}

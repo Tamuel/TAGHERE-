@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="GUIComponent.SimpleTextArea"/>
+<fullyQualifiedTypeName name="GUIComponent.SimpleTextField"/>
+<fullyQualifiedTypeName name="Data.StringData"/>
+<fullyQualifiedTypeName name="javax.swing.JPasswordField"/>
+<fullyQualifiedTypeName name="GUIComponent.SimplePasswordField"/>
+<fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+<fullyQualifiedTypeName name="GUIComponent.SimpleButton"/>
+<fullyQualifiedTypeName name="Data.ColorData"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="GUIComponent.SimpleJFrame"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="GUI.Component.SimpleButton"/>
+<fullyQualifiedTypeName name="java.awt.ScrollPane"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="GUI.Component.TitleBarPanel"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="java.awt.Dimension"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="FloorPlanObject.Oval"/>
+<fullyQualifiedTypeName name="FloorPlanObject.ObjectType"/>
+<fullyQualifiedTypeName name="Data.DimenData"/>
+<fullyQualifiedTypeName name="FloorPlanObject.Rectangle"/>
+</qualifiedTypeNameHistroy>

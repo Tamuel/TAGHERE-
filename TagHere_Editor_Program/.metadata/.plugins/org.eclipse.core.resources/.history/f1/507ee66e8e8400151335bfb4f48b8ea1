@@ -1,0 +1,13 @@
+package Protocol;
+
+public enum PTypes {
+	GET_ID(0),
+	SEND_ID(1);
+
+	private int value;
+	
+	public PTypes() {
+		
+	}
+	
+}

@@ -1,0 +1,33 @@
+1446817928050	Delete element
+1446818002527	Delete element
+1446818082997	Rename type 'ProtocolTypesEnum'
+1446819881334	Copy compilation unit
+1446819963969	Delete element
+1446819974733	Copy compilation unit
+1446824288540	Delete element
+1446824330794	Copy packages
+1446824344593	Delete elements
+1446824416294	Rename package 'GUI.GUIComponent'
+1446824427703	Rename package 'GUI.GUIFrame'
+1446824475532	Move compilation unit
+1446824506564	Move compilation unit
+1446827279119	Rename type 'FloorPlanSearchPanel'
+1446827282911	Rename type 'FloorPlanPreviewPanel'
+1446827531872	Rename type 'line'
+1446827542022	Rename type 'OVal'
+1446827611965	Rename type 'Lectangle'
+1446827654795	Rename package 'Figure'
+1446828424986	Rename type 'LineTypes'
+1446828437371	Rename type 'PTypes'
+1446884174736	Rename type 'DBProvider'
+1446886574975	Rename type 'Object'
+1446910317656	Rename field 'editBuilding'
+1446910323680	Rename field 'deleteBuilding'
+1446912308582	Rename type 'editViewPanel'
+1446912312783	Rename type 'propertiesPanel'
+1446912317839	Rename type 'toolsPanel'
+1446917251331	Rename field 'isSelected'
+1446917705540	Rename method 'custom'
+1446918242871	Rename field 'border'
+1446919002446	Rename method 'getObjectType'
+1446920811368	Rename local variable 'arg0'

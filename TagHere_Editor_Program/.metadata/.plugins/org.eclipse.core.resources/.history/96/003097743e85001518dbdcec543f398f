@@ -1,0 +1,24 @@
+package Data;
+
+/**
+ * Handle Data from server
+ * @author DongKyu
+ *
+ */
+public class DataProvider {
+	/** For singletone design pattern */
+	private static DataProvider singleton = null;
+
+	
+	private DataProvider() {
+	}
+
+	public static DataProvider getInstance()
+	{ 
+		if(singleton == null)
+		{
+			singleton  = new DataProvider();
+		}
+		return singleton;
+	}
+}

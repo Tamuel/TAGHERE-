@@ -1,0 +1,13 @@
+package FloorPlanObject;
+
+/**
+ * Icon Object
+ * Have image, position and text
+ * @author DongKyu
+ *
+ */
+
+public class Icon {
+	private Image iconImage;
+
+}
