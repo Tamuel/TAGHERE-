@@ -1,0 +1,11 @@
+package Protocol;
+
+public class Protocol {
+	private PTypes type;
+	
+	
+	public Protocol() {
+		
+	}
+
+}

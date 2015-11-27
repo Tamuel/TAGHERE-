@@ -1,0 +1,11 @@
+package FloorPlan;
+
+public class Floor {
+	
+	/** String for floor name */
+	private String name;
+	/** String for floor information */
+	private String information;
+	/** FloorPlan for floor's floor plan */
+	private FloorPlan floorPlan;
+}

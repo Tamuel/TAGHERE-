@@ -1,0 +1,13 @@
+package FloorPlan;
+
+import java.awt.Dimension;
+import java.util.ArrayList;
+
+import FloorPlanObject.FPObject;
+
+public class FloorPlan {
+	
+	/** Floor plan objects (like line, tag, edc) */
+	private ArrayList<FPObject> objects;
+
+}

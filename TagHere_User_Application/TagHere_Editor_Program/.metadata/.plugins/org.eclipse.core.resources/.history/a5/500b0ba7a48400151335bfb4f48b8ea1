@@ -1,0 +1,12 @@
+package FloorPlanObject;
+
+/**
+ * Line Object
+ * Have Start Position and End Position
+ * @author DongKyu
+ *
+ */
+
+public class Line {
+
+}
