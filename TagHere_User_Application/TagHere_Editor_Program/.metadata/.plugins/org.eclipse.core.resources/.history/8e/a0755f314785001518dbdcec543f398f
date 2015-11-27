@@ -1,7 +1,0 @@
-package GUI.Component;
-
-import javax.swing.JScrollPane;
-
-public class SimpleScrollPane extends JScrollPane {
-
-}

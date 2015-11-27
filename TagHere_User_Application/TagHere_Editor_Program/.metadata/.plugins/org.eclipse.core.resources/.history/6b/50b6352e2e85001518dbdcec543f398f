@@ -1,9 +1,0 @@
-package FloorPlan;
-
-public class Floor {
-	
-	/** String for floor name */
-	private String name;
-	/** FloorPlan for floor's floor plan */
-	private FloorPlan floorPlan;
-}

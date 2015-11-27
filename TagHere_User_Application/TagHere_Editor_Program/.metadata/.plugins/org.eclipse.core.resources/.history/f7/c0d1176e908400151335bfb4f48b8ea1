@@ -1,9 +1,0 @@
-package Protocol;
-
-public class Protocol {
-	
-	public Protocol() {
-		
-	}
-
-}

@@ -1,8 +1,0 @@
-package Data;
-
-import java.awt.Color;
-
-public class ColorData {
-	public static Color gray = new Color(240, 240, 240);
-
-}

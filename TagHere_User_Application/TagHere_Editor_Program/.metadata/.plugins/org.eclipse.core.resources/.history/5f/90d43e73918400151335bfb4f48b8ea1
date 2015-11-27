@@ -1,6 +1,0 @@
-package Data;
-
-public class StringData {
-	static final String ID = "ID";
-	static final String PASSWORD = "PASSWORD";
-}
