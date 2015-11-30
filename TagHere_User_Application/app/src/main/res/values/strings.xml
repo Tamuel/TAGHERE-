@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tag Here</string>
+    <string name="app_name">TagHere</string>
     <string name="scan">Scan</string>
     <string name="scan_only_qr_codes">Scan only QR Codes</string>
     <string name="title_activity_image">ImageActivity</string>
